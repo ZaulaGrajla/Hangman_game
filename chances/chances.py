@@ -14,4 +14,9 @@ class Chances:
         if self.chances==0:
             raise ChancesError('Nie masz już szans noobie')
 
+# Class chances:
+# w init tylko liczba szans
+#  get chances i decrease chances jako funkcje
+#  w decrease podnoszę błąd jak już nie ma szans
+
 # poczytaj o @property

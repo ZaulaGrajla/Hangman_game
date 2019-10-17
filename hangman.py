@@ -38,5 +38,5 @@ class Hangman:
     def get_word_to_find(self) -> str:
         return ''.join(self.word_to_find)
 
-# poucz się PyGame
-# spytaj Matiego co do testera
+dupa=Hangman()
+print(dupa.word_to_find)
