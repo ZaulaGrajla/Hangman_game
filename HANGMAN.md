@@ -1,4 +1,4 @@
-# hangmana
+# hangman_game
 
-To jest hangman czy działa?
-halo halo
+Enjoy.
+This is my first thing on GitHub ever.
