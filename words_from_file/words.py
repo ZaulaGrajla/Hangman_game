@@ -16,6 +16,7 @@ class Words:
 
     def get_path(self):
         print(os.path.dirname(__file__))
+        print(os.path.abspath(os.path.dirname(__file__)))
         return os.path.abspath(os.path.dirname(__file__))
 
     def get_word(self):
@@ -41,9 +42,29 @@ class Words:
             print(word, len(word))
         return word
 
-    # def get_word(self) -> str:
-    #     index = randint(0, len(self.list_of_words) - 1)
-    #     return self.list_of_words[index]
+
+def get_word_from_file():
+    lines = 0
+    directory = os.path.abspath(os.path.dirname(__file__))
+    with open(f'{directory}/words.txt') as file:
+        while file.readline():
+            lines += 1
+        print(lines)
+        file.seek(0)
+        random_line = randint(1, lines)
+        print(random_line)
+        our_word = None
+        line_read = 0
+        while line_read < random_line:
+            line_read += 1
+            our_word = file.readline().strip()
+            # print(our_word)
+        print(our_word)
+
+
+# def get_word(self) -> str:
+#     index = randint(0, len(self.list_of_words) - 1)
+#     return self.list_of_words[index]
 
 
 # dupa = Words()
@@ -52,3 +73,5 @@ class Words:
 if __name__ == '__main__':
     word = Words()
     print(word.get_word())
+
+# get_word_from_file()
