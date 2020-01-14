@@ -8,9 +8,9 @@ class HangmanGame:
 
     def play(self):
         while True:
-            print(f'Pozostała liczba szans: {self.hangman.get_chances()}')
+            print(f'Chances left: {self.hangman.get_chances()}')
             print(self.hangman.get_word_to_guess())
-            letter = input('Podaj literę lub słowo: ')
+            letter = input('Give a letter or word: ')
             if self.hangman.is_it_word_to_find(letter):
                 self.win()
                 break
@@ -24,18 +24,16 @@ class HangmanGame:
                 break
 
     def lose(self):
-        print('\nSłabiaku!!!!')
+        print('\nLoser!!!!')
         self.print_word_to_find()
 
     def win(self):
-        print('\nGratulacje!!!')
+        print('\nCongrats!!!')
         self.print_word_to_find()
 
     def print_word_to_find(self):
-        print(f'Szukane słowo to: {self.hangman.get_word_to_find()}')
+        print(f'A word to find: {self.hangman.get_word_to_find()}')
 
-
-# poczytaj o __main
 
 def main_game():
     game = HangmanGame()
@@ -43,7 +41,7 @@ def main_game():
         game = HangmanGame()
         game.play()
 
-        answer = input('Chcesz zagrać ponownie? [t/n]: ')
+        answer = input('Do you want to play again [y/n]: ')
         if answer == 'n':
             break
 

@@ -1,1 +1,1 @@
-Podstawowa aplikacja hangmana
+Basic hangman wordbase

@@ -1,5 +1,4 @@
 from chances import Chances
-# from words import RandomWord
 from words_from_file import Words as RandomWord
 
 
@@ -22,7 +21,6 @@ class Hangman:
         self.append_letter(letter)
 
     def are_all_letters_found(self) -> bool:
-        # return ''.join(self.word) == self.get_word_to_find()
         return '_' not in self.word
 
     def append_letter(self, letter)->None:
@@ -38,7 +36,5 @@ class Hangman:
     def get_word_to_find(self) -> str:
         return ''.join(self.word_to_find)
 
-
-test=Hangman()
-print(test.word_to_find)
-
+game=Hangman()
+print(game.word_to_find)
